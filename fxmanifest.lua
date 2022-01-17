@@ -7,7 +7,7 @@ description 'Language System for FiveM & RedM'
 author 'Snaily'
 version '1.0'
 
-client_scripts {
+shared_scripts {
     'base/cl_*.js',
     'lang/sh_*.js'
 }
