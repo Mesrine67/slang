@@ -7,6 +7,7 @@ DEBUG_ENABLED = true
 GetLanguage = () => {
     return SELECTED_LANGUAGE
 }
+exports('GetLanguage', GetLanguage)
 
 AddLanguage = (lang, phrases) => {
     if (REGISTERED_LANGUAGES[lang]) {
@@ -19,6 +20,7 @@ AddLanguage = (lang, phrases) => {
         console.log('New language added: '+ lang +'.')
     }
 }
+exports('AddLanguage', AddLanguage)
 
 GetPhrase = (phrase) => {
     if (SELECTED_LANGUAGE && REGISTERED_LANGUAGES[SELECTED_LANGUAGE]) {
@@ -27,6 +29,7 @@ GetPhrase = (phrase) => {
         }
     }
 }
+exports('GetPhrase', GetPhrase)
 
 if (DEBUG_ENABLED) {
     RegisterCommand('phrase', () => { // example
